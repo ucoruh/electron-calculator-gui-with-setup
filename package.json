@@ -1,0 +1,45 @@
+{
+  "name": "hesap-makinesi",
+  "version": "1.0.0",
+  "description": "Basit Hesap Makinesi",
+  "author": {
+    "name": "Uğur Coruh",
+    "email": "ugur.coruh.tr@gmail.com"
+  },
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "create-icon": "node create-icon.js",
+    "version": "git add -A",
+    "postversion": "git push && git push --tags"
+  },
+  "build": {
+    "appId": "com.ugurcoruh.hesapmakinesi",
+    "productName": "Hesap Makinesi",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  },
+  "devDependencies": {
+    "electron": "^28.3.3",
+    "electron-builder": "^24.13.3",
+    "sharp": "^0.33.2",
+    "to-ico": "^1.1.5"
+  }
+}
