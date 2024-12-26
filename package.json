@@ -1,6 +1,6 @@
 {
   "name": "hesap-makinesi",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Basit Hesap Makinesi",
   "author": {
     "name": "Uğur Coruh",
@@ -24,7 +24,9 @@
       "target": [
         {
           "target": "nsis",
-          "arch": ["x64"]
+          "arch": [
+            "x64"
+          ]
         }
       ],
       "icon": "icon.ico"
